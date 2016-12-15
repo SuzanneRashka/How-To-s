@@ -143,9 +143,7 @@ NOTE * jQuery runs inside a web browser while Knex runs outside a web browser us
 
       ** You should have `development` `test` and `production`.
 
-7) Then in your command to migrate and seed you will do so with 'knex migrate:latest —env <name of environment>'
-
-8) add the following general code to index.js
+7) add the following general code to index.js
       'use strict';
 
       const env = 'development';
@@ -157,9 +155,9 @@ NOTE * jQuery runs inside a web browser while Knex runs outside a web browser us
       console.log(sql);
 
       knex.destroy();
-9) excute the program by running
+8) excute the program by running
       node index.js
-10) use postgres to filter through the database. ex SELECT * FROM movies;
+9) use postgres to filter through the database. ex SELECT * FROM movies;
 
 ****************** 'Migration' ******************
 NOTE * (http://knexjs.org/#Migrations-CLI)
@@ -186,6 +184,7 @@ NOTE * If you want to migrate or seed to a certain database you need to ensure y
     'knex migrate:latest --env production'
 5) to rollback the last batch of migrations:
     'knex migrate:rollback'
+6) Then in your command to migrate and seed you will do so with 'knex migrate:latest —env <name of environment>'
 
 ****************** 'Seeding' ******************
 NOTE * (http://knexjs.org/#Schema)
